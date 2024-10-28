@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Quiz</h1>
+    <form action="">
+        <fieldset>
+            <label for="q1" class="title label">¿Con Cuantas tecnologias trabaja la blockchain de solana?</label>
+            <input type="number" id="q1" onchange="question1()" class="input-text" required>
+
+        </fieldset>
+        <fieldset>
+            <label for="protocolo" class="title label">¿Cual es el protocolo de consenso de solana?</label>
+            <select name="protocolo" id="protocolo" onchange="protocolo1()">
+                <option value="">Elige uno</option>
+                <option value="POH">Proof Of History</option>
+                <option value="POW">Proof Of Work</option>
+                <option value="POS">Proof Of Stake</option>
+                <option value="POA">Proof Of Authority</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend class="title">que significa nft</legend>
+            <label for="n1" class="label"><input type="radio" name="lenguaje" value="Non-Fungible-token"
+                    onchange="nft()" id="n1">Non-Fungible
+                Token</label>
+
+
+            <label for="n3" class="label">
+                <input type="radio" name="lenguaje" value="Nota-Fiscal-Tributaria" onchange="nft()" id="n3">Nota
+                Fiscal
+                Tributaria
+            </label>
+            <label for="n4" class="label">
+                <input type="radio" name="lenguaje" value="Número-de-Factura-de-Transacción" onchange="nft()"
+                    id="n4">Número
+                de Factura de Transacción
+            </label>
+            <label for="n5" class="label">
+                <input type="radio" name="lenguaje" value="Nuevo-Formato-para-Transacciones" onchange="nft()"
+                    id="n5">Nuevo
+                Formato para Transacciones
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend class="title">¿Qué programa sirve para "navegar" por la blockchain?</legend>
+            <label for="Explorador" class="label">
+                <input type="radio" name="ex" id="Explorador" value="Explorador de bloques"
+                    onchange="Explorador1()">Explorador de bloques
+            </label>
+            <label for="Google" class="label">
+                <input type="radio" name="ex" id="Google" value="Google" onchange="Explorador1()">Google chrome
+            </label>
+            <label for="wallet" class="label">
+                <input type="radio" name="ex" id="wallet" value="wallet" onchange="Explorador1()">Billetera digital
+            </label>
+
+        </fieldset>
+        <Legend class="title">De las siguientes opciones cuales son tecnologias de solana</Legend>
+        <div id="grid-container">
+            <fieldset>
+<!--tuve que ponerle required a todas las de abajo porque sino me daba un error-->
+
+                <label for="Meenpool" class="checkbox">
+                    <input type="checkbox" name="" id="Meenpool" class="input-checkbox" value="Meenpool" required>Meenpool
+                </label>
+                <label for="Gulf stream" class="checkbox">
+                    <input type="checkbox" name="" id="Gulf stream" class="input-checkbox" value="Gulf stream" required>Gulf
+                    stream
+                </label>
+                <label for="Tower" class="checkbox">
+                    <input type="checkbox" name="" id="Tower" class="input-checkbox" value="Tower BFT" required>Tower BFT
+
+            </fieldset>
+            <fieldset>
+                <label for="Cloudbreak" class="checkbox">
+                    <input type="checkbox" name="" id="Cloudbreak" class="input-checkbox" value="Cloudbreak" required>Cloudbreak
+                </label>
+
+
+                <label for="Pipelining" class="checkbox">
+                    <input type="checkbox" name="" id="Pipelining" class="input-checkbox" value="Pipelining" required>Pipelining
+                </label>
+                <label for="P2P" class="checkbox">
+                    <input type="checkbox" class="input-checkbox" id="P2P" value="P2P" required>P2P
+                </label>
+                
+            </fieldset>
+            <button id="verificar" class="input-checkbox" onclick="verificarRespuestas()">verificar respuestas</button>
+        </div>
+
+        <button type="button"class="button2" id="boton">mostrar
+            puntaje final</button>
+        <p class="puntaje" id="puntaje"></p>
+    </form>
+    <script>
+
+
+
+
+        let boton = document.getElementById("boton")
+boton.addEventListener('click',function mostrarpuntaje() {
+    alert("Tus puntaje final es: " + puntos)
+    console.log("Tus puntaje final es: " + puntos)
+})
+
+    </script>
+</body>
+</html>
